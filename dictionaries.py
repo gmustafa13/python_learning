@@ -36,3 +36,17 @@ def dict_(d):
         print(d[n])
 
 dict_(dictionary)
+
+
+#local, global level concept
+def add():
+    a=10;
+    def newAdd():
+        print("a",a)
+        b= 1
+        print("b",b)
+        # a= a+5;
+        print("h",a) 
+    newAdd()
+
+add()
