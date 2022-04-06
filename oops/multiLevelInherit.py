@@ -16,6 +16,18 @@ class Swift(Car):
         super().basicDetails()
         print(f"color is  {self.color}")
 
+class Dealer(Swift):
+    def __init__(self,carType,noOfSeat,autometd,color,dealerName):
+        super().__init__(carType,noOfSeat,autometd,color)
+        self.dealerName = dealerName
+
+    def details(self):
+        super().carDetails()
+        print(f"Maruti suzuki {self.dealerName}")
+
 
 b1 = Swift('hbase','5','semi-automated','black')
 b1.carDetails()
+
+d1 = Dealer('hbase1','6','semi-automated_','black_','Gulam')
+d1.details()
